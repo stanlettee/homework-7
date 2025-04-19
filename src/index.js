@@ -2,25 +2,32 @@
 // const addBookmarkBtn = document.querySelector('#addBookmarkBtn')
 // const bookmarkList = document.querySelector('#bookmarkList')
 
-const addBookmarkBtn = document.querySelector('#addBookmarkBtn').addEventListener(('click'), () => {
-    const bookmarkInput = document.querySelector('#bookmarkInput')
-    if (bookmarkInput.value === ''){
-        document.querySelector('#checkBookmark').innerHTML = "Ви нічого не ввели"
-    } else {
-        document.querySelector('#checkBookmark').innerHTML = "";
-        localStorage.setItem("bookmark", JSON.stringify(bookmarkInput.value));
-        const bookmarkList = document.querySelector('#bookmarkList')
-        let item = document.createElement("li");
-        item.innerHTML = `
-            <a target="_blank">${bookmarkInput.value}</a>
-            <div class="actions">
-                <button id="editBookmark">Змінити закладку</button>
-                <button id="deleteBookmark">Видалити закладку</button>
-            </div>
-        `;
-        bookmarkList.insertAdjacentElement("beforebegin", item);
-    }
-})
+import products from "./products.json"
+import makeList from "./templates/template.hbs"
+
+console.log(makeList({products}))
+document.querySelector('.box').innerHTML = makeList({products})
+
+
+// const addBookmarkBtn = document.querySelector('#addBookmarkBtn').addEventListener(('click'), () => {
+//     const bookmarkInput = document.querySelector('#bookmarkInput')
+//     if (bookmarkInput.value === ''){
+//         document.querySelector('#checkBookmark').innerHTML = "Ви нічого не ввели"
+//     } else {
+//         document.querySelector('#checkBookmark').innerHTML = "";
+//         localStorage.setItem("bookmark", JSON.stringify(bookmarkInput.value));
+//         const bookmarkList = document.querySelector('#bookmarkList')
+//         let item = document.createElement("li");
+//         item.innerHTML = `
+//             <a target="_blank">${bookmarkInput.value}</a>
+//             <div class="actions">
+//                 <button id="editBookmark">Змінити закладку</button>
+//                 <button id="deleteBookmark">Видалити закладку</button>
+//             </div>
+//         `;
+//         bookmarkList.insertAdjacentElement("beforebegin", item);
+//     }
+// })
 
 // let bookmarks = JSON.parse(localStorage.getItem("bookmarks")) || [];
 
