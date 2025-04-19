@@ -18,3 +18,4 @@ export const products = [
       description: 'Noise-cancelling headphones for better focus.',
     },
   ];
+
