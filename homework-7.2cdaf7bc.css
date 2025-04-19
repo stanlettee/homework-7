@@ -59,6 +59,8 @@ ul li {
   align-items: center;
   margin: 5px 0;
   padding: 10px;
+  text-decoration: none;
+  list-style: none;
   display: flex;
 }
 
@@ -73,5 +75,11 @@ button.delete {
 
 button.delete:hover {
   background-color: #c82333;
+}
+
+#checkBoormark {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 /*# sourceMappingURL=homework-7.2cdaf7bc.css.map */
